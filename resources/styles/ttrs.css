@@ -1,0 +1,159 @@
+:root {
+    font-family: 'VT323', monospace;
+    letter-spacing: 4;
+    font-size: 24px;
+    color: white;
+}
+body {
+    background-color: #e7ffd6;
+    display: grid;
+}
+button {
+    position: relative;
+    flex-grow: 1;
+    background-color: #8fc46d;
+    box-shadow: 0 8px 0 #3b7355;
+}
+button.pushed {
+    top: 8px;
+    box-shadow: none;
+}
+
+.content {
+    margin: auto;
+    min-width: 179.2px;
+    min-height: 320px;
+    max-width: 455.2px;
+    max-height: 665px;
+    display: flex;
+    flex-direction: column;
+}
+
+.point-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.point-container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-point-container {
+    color: #081821;
+}
+.current-point-container {
+    color: #8fc46d;
+}
+
+.stage-container {
+    height: calc((100% - 96px) * 4 / 5);
+    padding: 8px;
+    position: relative;
+}
+.stage {
+    width: 100%;
+    height: 100%;
+    background-color: #8fc46d;
+    box-shadow: 0 8px 0 #3b7355;
+}
+.stage-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.button-container {
+    flex-grow: 1;
+    display: flex;
+    padding: 8px;
+    gap: 16px;
+}
+
+.circular-num-set {
+    display: flex;
+    width: 160px;
+    height: 40px;
+}
+.circular-num-container {
+    flex-grow: 1;
+    overflow: hidden;
+}
+.circular-num {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000%;
+}
+.circular-num > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+    button {
+        background-color: #555;
+        box-shadow: 0 8px 0 #222;
+    }
+    .top-point-container {
+        color: #8fc46d;
+    }
+    .current-point-container {
+        color: #222;
+    }
+    .stage {
+        background-color: #555;
+        box-shadow: 0 8px 0 #222;
+    }
+    .stage-cover {
+        background-color: #000C;
+        color: white;
+    }
+    path {
+        fill: #222;
+        stroke: #222;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #e7ffd6;
+    }
+    button {
+        background-color: #8fc46d;
+        box-shadow: 0 8px 0 #3b7355;
+    }
+    .top-point-container {
+        color: #081821;
+    }
+    .current-point-container {
+        color: #8fc46d;
+    }
+    .stage {
+        background-color: #8fc46d;
+        box-shadow: 0 8px 0 #3b7355;
+    }
+    .stage-cover {
+        background-color: #0008;
+        color: white;
+    }
+    path {
+        fill: #3b7355;
+        stroke: #3b7355;
+    }
+}
